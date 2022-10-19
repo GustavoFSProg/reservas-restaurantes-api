@@ -46,10 +46,7 @@ async function updateTables(req: Request, res: Response) {
     await prisma.tables.update({
       where: { id: req.params.id },
       data: {
-       number: req.body.number,
         status: req.body.status,
-        client_name: req.body.client_name,
-        time: req.body.time,
 
       },
     })
